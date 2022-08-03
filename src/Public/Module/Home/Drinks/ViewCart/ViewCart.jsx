@@ -8,7 +8,7 @@ import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogTitle from "@mui/material/DialogTitle";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { CartContext } from "../../../Contexts/Cart";
 
 
@@ -108,9 +108,12 @@ const ViewCart = ({ cart, setCart, handleChange }) => {
                     </DialogContent>
                     <DialogActions>
                       <Button onClick={handleCloseDialog}>Cancel</Button>
+                    <Link to="/order-details">
                       <Button onClick={handleCloseDialog} autoFocus>
                         Order
                       </Button>
+                    
+                    </Link>
                     </DialogActions>
                   </Dialog>
                 </div>

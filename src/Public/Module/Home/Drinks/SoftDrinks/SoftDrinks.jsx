@@ -14,6 +14,8 @@ import {
 } from "reactstrap";
 import { useState } from "react";
 import { useEffect } from "react";
+import LinearProgress from "@mui/material/LinearProgress";
+
 import Search from "../../Foods/Search/Search";
 import { CartContext } from "../../../Contexts/Cart";
 
@@ -36,6 +38,10 @@ const SoftDrinks = ({ handleClick }) => {
     <>
       <div id="soft-drinks">
         <Container>
+        <LinearProgress />
+            <div className="foods">
+              <h1 className="title"> Foods</h1>
+            </div>
           <Search />
           <Row>
             {lists.map((list) => (
