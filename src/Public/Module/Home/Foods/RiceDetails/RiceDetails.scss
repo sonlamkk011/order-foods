@@ -1,0 +1,31 @@
+#rice-details {
+    margin-top: 65px;
+    background-color:aliceblue ;
+    .foods{
+            background-color:darkgray;
+            height: 50px;
+            color: #000;
+            display: flex;
+            align-items: center;
+            padding-left: 15px;
+            cursor: pointer;
+            border-radius: 1rem;
+      .title {
+        margin-left: 1rem;
+        font-size: 22px;
+        margin-left: 30rem;
+
+
+    }
+   
+   
+
+  }
+    .cart{
+      border-radius: 20px;
+      margin-top: 2rem;
+      padding: 1rem;
+      box-shadow: 20px 30px 50px 10px rgb(0 0 0 / 10%)
+    }
+    
+}
