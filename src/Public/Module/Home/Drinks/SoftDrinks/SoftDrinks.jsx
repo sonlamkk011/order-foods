@@ -33,7 +33,6 @@ const SoftDrinks = ({ handleClick }) => {
     <>
       <div id="soft-drinks">
         <Container>
-        <LinearProgress />
             <div className="foods">
               <h1 className="title"> Foods</h1>
             </div>
