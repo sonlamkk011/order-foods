@@ -7,6 +7,8 @@ import { Link } from "react-router-dom";
 
 import "./Header.scss";
 import { CartContext } from "../../Contexts/Cart";
+import Sidebar from "../SideBar/Sidebar";
+import { Button } from "antd";
 const Header = () => {
   return (
     <>
@@ -18,42 +20,38 @@ const Header = () => {
                 Oder
                 <FastfoodIcon /> Food
               </a>
-              <a className="navbar-brand brand-logo-mini" href="/">
-                <img src="Assets/images/logo-mini.svg" alt="logo" />
-              </a>
+             
+              
             </div>
+            
+           
             <div className="navbar-menu-wrapper d-flex align-items-center justify-content-end">
-              <button
-                className="navbar-toggler navbar-toggler align-self-center"
-                type="button"
-                data-toggle="minimize"
-              >
-                <span className="icon-menu" />
-              </button>
-              <ul className="navbar-nav mr-lg-2">
-                <li className="nav-item nav-search d-none d-lg-block">
-                  <div className="input-group">
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="navbar-search-input"
-                      placeholder="Search now"
-                      aria-label="search"
-                      aria-describedby="search"
-                    />
-                  </div>
-                </li>
-              </ul>
-              <ul className="navbar-nav navbar-nav-right">
-                <div className="cart">
+              <div className="foods-details">
+                <Link to="/foods-details">
+                  <h1 className="foods">Foods</h1>
+                
+                </Link>
+              </div>
+              <div className="drinks-details">
+              <Link to="/soft-drinks">
+                  <h1 className="drinks">Drinks</h1>
+                
+                </Link>
+
+              </div>
+              <div className="cart">
                   <CartContext.Consumer>
                     {({ cartItems }) => (
                       <Link to="/view-cart">
-                        <ShoppingCartIcon />({cartItems.length})
+                         <ShoppingCartIcon  style={{color:"rgb(0, 177, 79)"}}/>({cartItems.length})
                       </Link>
                     )}
                   </CartContext.Consumer>
                 </div>
+             
+              <ul className="navbar-nav navbar-nav-right">
+                
+               
                 <li className="nav-item dropdown">
                   <a
                     className="nav-link count-indicator dropdown-toggle"
@@ -152,7 +150,9 @@ const Header = () => {
           {/* <Home /> */}
         </div>
       </div>
+      
     </>
+    
   );
 };
 export default Header;

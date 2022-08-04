@@ -1,14 +1,13 @@
 import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
 import Alerts from "./Module/Alerts/Alerts";
 import Header from "./Module/Shared/Header/Header";
-import Navbar from "./Module/Shared/Navbar/Navbar";
+import Sidebar from "./Module/Shared/SideBar/Sidebar";
 import "./Public.scss";
 const Public = () => {
   return (
     <>
     <div id="public">
     <Header />
-      <Navbar />
       <Alerts />
       <Outlet/>
     </div>

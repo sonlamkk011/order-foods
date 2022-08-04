@@ -5,19 +5,14 @@ import {
   Col,
   Card,
   CardImg,
-  CardText,
-  CardBody,
-  CardTitle,
-  CardSubtitle,
-  Button,
-  Alert,
+  
 } from "reactstrap";
 import { useState } from "react";
 import { useEffect } from "react";
 import LinearProgress from "@mui/material/LinearProgress";
-
 import Search from "../../Foods/Search/Search";
 import { CartContext } from "../../../Contexts/Cart";
+import { Button } from "antd";
 
 
 
@@ -50,18 +45,18 @@ const SoftDrinks = ({ handleClick }) => {
                   <CardImg style={{ width: 130, height: 120, margin: 20 }} src={list.image} />
                   <div>
                     <div style={{ marginTop: - 140, marginLeft: 180, fontSize: 20 }}>{list.name} </div>
-                    <div style={{ backgroundColor: "#00b14f", width: 55, marginLeft: 10, marginTop: -35, textAlign: "center", color: "whitesmoke" }}>
+                    <div style={{ backgroundColor: "#00b14f", width: 60, marginLeft: 10, marginTop: -35, textAlign: "center", color: "whitesmoke" }}>
                       {list.status}
                     </div>
                     <div style={{ marginLeft: 180, marginTop: 30, fontSize: 20 }} > {list.price} VND </div>
                     <CartContext.Consumer>
                       {({ addToCart }) => (
-                        <button className="button-add" style={{ width: 100, marginLeft: 230, marginTop: 25 }} onClick={() => {
+                        <Button className="button" style={{ width: 100, marginLeft: 250, marginTop: 25, backgroundColor:"rgb(0, 177, 79)" }} onClick={() => {
                           handleClick(list);
                           addToCart(list);
                         }}>
                           Add to card
-                        </button>
+                        </Button>
                       )}
                     </CartContext.Consumer>
                   </div>

@@ -16,6 +16,8 @@ import { Login } from "./Public/Module/Auth/Login/Login";
 import { Register } from "./Public/Module/Auth/Register/Register";
 import { PageError } from "./Public/Module/Shared/ErrorPage/PageError";
 import OrderDetails from "./Public/Module/Home/OrderDetails/OrderDetails";
+import Foods from "./Public/Module/Home/Foods/Foods";
+import Sidebar from "./Public/Module/Shared/SideBar/Sidebar";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -44,6 +46,7 @@ function App() {
           <Route path="/" element={<Public />}>
             <Route path="/" element={<Home />} />
             <Route path="rice-details" element={<RiceDetails />} />
+            <Route path="foods-details" element={<Foods />} />
             <Route path="view-cart" element={<ViewCart cart={cart} setCart={setCart}  />} />
             <Route path="soft-drinks" element={<SoftDrinks handleClick={handleClick} />} />
             <Route path="order-details" element={<OrderDetails />} />

@@ -1,6 +1,23 @@
 #header{
     background-color: aliceblue;
+
+    .foods-details{
+        margin-left: 300px;
+
+        .foods{
+            color: rgb(0, 177, 79);
+        }
+    }
+    .drinks-details{
+        margin-left: 300px;
+        
+        .drinks{
+            color: rgb(0, 177, 79);
+        }
+    }
+
     .cart{
-        margin-top: 19px;
+       margin-left: 300px;
+       color: rgb(0, 177, 79);
     }
 }
